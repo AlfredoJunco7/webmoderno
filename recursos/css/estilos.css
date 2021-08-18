@@ -1,0 +1,2038 @@
+/*font-family: 'Open Sans', sans-serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+
+
+/*font-family: 'Montserrat', sans-serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+
+
+/*===== VARIABLES CSS =====*/
+:root{
+    --header-height: 3rem;
+    --font-medium: 500;
+}
+/*===== Fuente y tipografia =====*/
+:root{
+    --big-font-size: 6.25rem;
+    --h2-font-size: 1.25rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+}
+@media screen and (min-width: 780px){
+    :root{
+        --big-font-size: 10.5rem;
+        --h2-font-size: 2rem;
+        --normal-font-size: 1rem;
+        --small-font-size: .875rem;
+    }
+}
+
+/*===== Margenes =====*/
+:root{
+    --mb-3: 1.5rem;
+    --mb-4: 2rem;
+    --mb-0-5: .5rem;
+  --mb-0-75: .75rem;
+  --mb-1: 1rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  --mb-2-5: 2.5rem;
+}
+
+/*===== z index =====*/
+:root{
+    --z-tooltip: 10;
+    --z-fixed: 100;
+}
+
+/*===== BASE =====*/
+*,::before,::after{
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    margin: var(--header-height) 0 0 0;
+}
+h1,h2,p{
+    margin: 0;
+}
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    color: var(--color-h1);
+}
+a{
+    text-decoration: none;
+    color: var(--color-h1);
+}
+img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+
+/*============================  LOADER  ================================*/
+
+.container_loader {
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 99999999;
+    position: fixed;
+    background-color: var(--color-blanco);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    clip-path: circle(150% at 100% 0);
+}
+.container_loader img {
+    width: 50px;
+    height: 50px;
+    animation: load 1.2s linear infinite;
+}
+.container_loader p {
+    color: black;
+    text-align: center;
+    margin-top: 30px;
+    font-family: sans-serif;
+    letter-spacing: .5px;
+    font-size: 18px;
+}
+.cerrar {
+    transform: translateY(-100%);
+    transition: all 1s;
+    clip-path: circle(50% at 100% -30%);
+}
+
+
+@keyframes load {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+
+
+
+
+
+
+/*===== NAV =====================================================*/
+
+
+
+:root {
+    --header-height: 3rem;
+    /*========== Margenes Bottom ==========*/
+    --mb-0-5: .5rem;
+    --mb-0-75: .75rem;
+    --mb-1: 1rem;
+    --mb-1-5: 1.5rem;
+    --mb-2: 2rem;
+    --mb-2-5: 2.5rem;
+    /*========== z index ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+  }
+  
+  @media screen and (min-width: 968px) {
+    :root {
+      --biggest-font-size: 7.5rem;
+      --bigger-font-size: 4.5rem;
+      --big-font-size: 4rem;
+      --h2-font-size: 1.5rem;
+      --h3-font-size: 1.25rem;
+      --normal-font-size: 1rem;
+      --small-font-size: .875rem;
+      --smaller-font-size: .813rem;
+    }
+  }
+  
+  /*=============== BASE ===============*/
+  * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    margin: var(--header-height) 0 0 0;
+  }
+  
+  h1, h2, h3 {
+    color: var(--title-color);
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  button,
+  input {
+    border: none;
+    outline: none;
+  }
+  
+  button {
+    cursor: pointer;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  
+
+  
+  /*=============== LAYOUT ===============*/
+  
+  
+  .container {
+    max-width: 968px;
+    margin-left: var(--mb-1-5);
+    margin-right: var(--mb-1-5);
+  }
+  
+  .grid {
+    display: grid;
+  }
+  
+  /*=============== HEADER ===============*/
+  .header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: var(--z-fixed);
+    background: transparent;
+  }
+  
+  /*=============== NAV ===============*/
+  .nav {
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav__logo {
+    display: flex;
+    width: 1.5rem;
+  }
+  .nav__logo img {
+      width: 35px;
+      height: 35px;
+  }
+  
+  .nav__toggle {
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+  
+  @media screen and (max-width: 767px) {
+      .header {
+          background-color: var(--color-oro);
+      } 
+    .nav__menu {
+      position: fixed;
+      background-color: var(--color-rojo);
+      top: -100%;
+      left: 0;
+      width: 100%;
+      padding: 4rem 0 3rem;
+      transition: .5s;
+    }
+  }
+  
+  .nav__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1rem;
+  }
+  
+  .nav__link {
+    color: var(--color-texto);
+    font-size: var(--h2-font-size);
+    font-family: var(--fontfamily-titles);
+    font-weight: 600;
+    transition: .4s;
+  }
+  
+ 
+  
+  .nav__close {
+    position: absolute;
+    font-size: .2rem;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+  }
+  .nav__close img {
+      width: 30px;
+      height: 30px;
+  }
+  
+  /* show menu */
+  .show-menu {
+    top: 0;
+  }
+  
+  /* Change background header */
+  .scroll-header {
+    background-color: var(--color-blanco);
+    box-shadow: 2px 0 4px 2px rgb(95, 87, 87);
+  }
+  
+ 
+  
+  
+  
+  /*=============== SCROLL BAR ===============*/
+  ::-webkit-scrollbar {
+    width: .60rem;
+    border-radius: .5rem;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--scroll-thumb-color);
+    border-radius: .5rem;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: var(--scroll-thumb-color-alt);
+  }
+  
+  /*=============== MEDIA QUERIES ===============*/
+  /* For small devices */
+  @media screen and (max-width: 340px) {
+    .container {
+      margin-left: var(--mb-1);
+      margin-right: var(--mb-1);
+    }
+  }
+  
+  
+  
+  @media screen and (min-width: 767px) {
+    body {
+      margin: 0;
+    }
+    .section {
+      padding: 6rem 0 2rem;
+    }
+    .nav {
+      height: calc(var(--header-height) + 1.5rem);
+    }
+    .nav__logo {
+      width: 2rem;
+    }
+    .nav__list {
+      flex-direction: row;
+      column-gap: 3.5rem;
+    }
+    .nav__link {
+      font-size: var(--normal-font-size);
+      text-transform: initial;
+    }
+    .nav__toggle, .nav__close {
+      display: none;
+    }
+  }
+  
+  /* For large devices */
+  @media screen and (min-width: 1024px) {
+    .container {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+
+
+
+
+
+
+
+  /*====================== Variables ================================*/
+
+  :root{
+    --color-negro: rgb(0, 0, 0);
+    --color-blanco: rgb(255, 255, 255);
+    --color-gris: rgb(204, 197, 197);
+    --color-oro: #f0e219;
+    --color-rojo: #f12626;
+    --color-azul: #0072bc;
+}
+
+
+:root{
+    --fontfamily-banner: 'Open Sans', sans-serif;
+    --fontfamily-titles: 'Open Sans', sans-serif;
+    --fontfamily-texto: 'Montserrat', sans-serif;
+}
+
+
+
+
+
+  /*====================== Banner =======================================*/
+
+  .banner {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+}
+.banner video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    z-index: -1;
+}
+.banner .textos_banner {
+    width: 90%;
+    height: 90%;
+    margin: auto auto;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.banner .textos_banner h1 {
+    font-size: 40px;
+    color: var(--color-obscuro);
+    font-family: var(--fontfamily-banner);
+    z-index: 1;
+    padding: 8px 15px;
+    background-color: hsla(54, 88%, 55%, 0.281);
+    border-radius: 5px;
+}
+.banner .textos_banner h2 {
+    font-size: 25px;
+    color: var(--color-obscuro);
+    font-family: var(--fontfamily-banner);
+    font-weight: 600;
+    z-index: 1;
+    margin-top: 10px;
+}
+.banner .textos_banner a {
+    font-size: 18px;
+    color: var(--color-obscuro);
+    font-family: var(--fontfamily-banner);
+    font-weight: 600;
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 4px 5px;
+    z-index: 1;
+    margin-top: 20px;
+}
+
+
+
+
+/*================ Title ===========================*/
+
+.title {
+    width: 90%;
+    margin: auto;
+    padding-top: 120px;
+}
+.title h2 {
+    font-family: var(--fontfamily-banner);
+    color: var(--color-negro);
+    font-size: 30px;
+    font-weight: 600;
+}
+.title .line {
+    width: 10%;
+    height: 3px;
+    background-color: var(--color-oro);
+    margin-top: 3px;
+}
+
+
+
+
+/*================ Servicios ===========================*/
+
+.servicios {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-top: 70px;
+}
+.servicios .img {
+    width: 30%;
+}
+.servicios .img img {
+    max-width: 100%;
+    height: 350px;
+    margin: auto;
+    object-fit: cover;
+}
+.servicios .textos_servicios {
+    width: 50%;
+}
+.servicios .textos_servicios .descripcion:nth-child(1) {
+  padding-bottom: 30px;
+}
+
+.servicios .textos_servicios .descripcion:nth-child(2) {
+    margin-top: 20px;
+}
+
+.servicios .textos_servicios .descripcion .title_desc {
+    display: flex;
+    align-items: center;
+}
+.servicios .textos_servicios .descripcion .title_desc img {
+    width: 25px;
+    height: 25px;
+    object-fit: cover;
+}
+.servicios .textos_servicios .descripcion .title_desc h2 {
+    font-family: var(--fontfamily-titles);
+    color: var(--color-negro);
+    font-weight: 600;
+    font-size: 25px;
+    margin-left: 10px;
+}
+.servicios .textos_servicios .descripcion p {
+    font-family: var(--fontfamily-texto);
+    font-size: 16px;
+    color: var(--color-negro);
+    font-weight: 400;
+    margin-top: 15px;
+} 
+
+
+
+
+/*=======================  paginas =======================*/
+
+
+.wrapper{
+    width: 100%;
+    margin-top: 70px;
+  }
+  .carousel{
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 30px;
+  }
+  .carousel .card{
+    margin: 30px 0px;
+    border: 1px solid rgba(46, 44, 44, 0.116);
+    border-radius: 10px;
+    box-shadow: 0px 4px 13px rgba(0, 0, 0, 0.287);
+    width: 100%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .carousel .card .contenedor_card {
+    width: 90%;
+    height: 80%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+  }
+  .carousel .card .contenedor_card img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+  }
+
+  .carousel .card .contenedor_card h3 {
+    font-family: var(--fontfamily-titles);
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--color-negro);
+}
+.carousel .card .contenedor_card p {
+    font-family: var(--fontfamily-texto);
+    font-size: 16px;
+    font-weight: 400;
+    width: 90%;
+    margin: auto;
+    text-align: center;
+}
+
+ /* .carousel .card-1{
+      background-color: brown;
+  }
+  .carousel .card-2{
+    background: #0072bc;
+  }
+  .carousel .card-3{
+    background: #39b54a;
+  }
+  .carousel .card-4{
+    background: #f26522;
+  }
+  .carousel .card-5{
+    background: #630460;
+  }*/
+  .owl-dots{
+    text-align: center;
+    margin-top: 40px;
+  }
+  .owl-dot{
+    height: 15px;
+    width: 45px;
+    margin: 0 5px;
+    outline: none;
+    border-radius: 14px;
+    border: 2px solid #0072bc!important;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+  }
+  .owl-dot.active,
+  .owl-dot:hover{
+    background: #0072bc!important;
+  }
+ 
+
+  /* ===================  About =================*/
+
+
+  .about {
+      width: 100%;
+      background-color: var(--color-negro);
+      margin-top: 100px;
+    }
+  .textos_about {
+      width: 90%;
+      padding: 50px 0;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+  }
+  .about img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 10px;
+  }
+  .about h3 {
+      font-family: var(--fontfamily-titles);
+      font-weight: 600;
+      color: var(--color-oro);
+      margin-top: 3px;
+  }
+  .about .ab {
+    font-weight: 400;
+    color: var(--color-blanco);
+    font-size: 25px;
+    margin-top: 5px;
+}
+.about .desc {
+    font-family: var(--fontfamily-texto);
+    color: var(--color-blanco);
+    font-size: 18px;
+    margin-top: 10px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+.textos_about em {
+    font-size: 30px;
+    color: var(--color-oro);
+}
+
+
+
+
+/*================ Portafolio ========================*/
+
+.portafolio {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-top: 100px;
+}
+.portafolio a {
+    width: 30%;
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 45px 0;
+    border: 1px solid rgba(46, 44, 44, 0.116);
+    box-shadow: 0px 4px 13px rgba(0, 0, 0, 0.287);
+    background-image: url(../imagenes/port1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover; 
+}
+
+.portafolio a h4 {
+    font-family: var(--fontfamily-titles);
+    font-size: 20px;
+    color: var(--color-negro);
+    font-weight: 700;
+    width: 90%;
+    margin: auto;
+}
+.portafolio a p {
+    font-family: var(--fontfamily-texto);
+    font-size: 16px;
+    color: var(--color-negro);
+    font-weight: 500;
+    width: 90%;
+    margin: auto;
+    padding-top: 10px;
+}
+
+
+
+
+/*============= Footer ====================*/
+
+.footer {
+    width: 100%;
+    background-color: var(--color-gris);
+    margin-top: 180px;
+}
+.foo_desc {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+    font-family: var(--fontfamily-titles);
+    color: var(--color-negro);
+    font-weight: 500;
+    font-size: 20px;
+}
+.agrado {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+    font-family: var(--fontfamily-titles);
+    color: var(--color-negro);
+    font-weight: 500;
+    font-size: 20px;
+}
+.textos_foo {
+    width: 80%;
+    margin: auto;
+    padding-top: 50px;
+}
+.textos_foo .uno {
+    display: flex;
+    align-items: center;
+}
+.textos_foo .uno:nth-child(2) {
+    margin-top: 35px;
+}
+.textos_foo .uno:nth-child(3) {
+    margin-top: 35px;
+}
+.textos_foo .uno img {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+}
+.textos_foo .uno p {
+    font-family: var(--fontfamily-texto);
+    color: var(--color-negro);
+    font-size: 16px;
+    margin-left: 18px;
+    font-weight: 500;
+}
+
+.copy {
+    padding: 70px;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.copy p {
+    font-family: var(--fontfamily-texto);
+    color: var(--color-negro);
+    font-size: 16px;
+    margin-left: 18px;
+    font-weight: 500;
+}
+
+
+
+
+
+
+
+
+/*============================================  Responsive =======================================*/
+/*============================================  Responsive =======================================*/
+/*============================================  Responsive =======================================*/
+
+
+
+@media (max-width: 800px) {
+    /*====================== Banner =======================================*/
+
+    .banner {
+      position: relative;
+      width: 100%;
+      height: 90vh;
+  }
+  .banner video {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+      z-index: -1;
+  }
+  .banner .textos_banner {
+      width: 90%;
+      height: 90%;
+      margin: auto auto;
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+  }
+  .banner .textos_banner h1 {
+      font-size: 30px;
+      color: var(--color-obscuro);
+      font-family: var(--fontfamily-banner);
+      z-index: 1;
+      padding: 8px 15px;
+      background-color: hsla(54, 88%, 55%, 0.281);
+      border-radius: 5px;
+  }
+  .banner .textos_banner h2 {
+      font-size: 20px;
+      color: var(--color-obscuro);
+      font-family: var(--fontfamily-banner);
+      font-weight: 600;
+      z-index: 1;
+      margin-top: 10px;
+  }
+  .banner .textos_banner a {
+      font-size: 18px;
+      color: var(--color-obscuro);
+      font-family: var(--fontfamily-banner);
+      font-weight: 600;
+      border: 1px solid black;
+      border-radius: 3px;
+      padding: 4px 5px;
+      z-index: 1;
+      margin-top: 20px;
+  }
+  
+  
+  
+  
+  /*================ Title ===========================*/
+  
+  .title {
+      width: 90%;
+      margin: auto;
+      padding-top: 80px;
+  }
+  .title h2 {
+      font-family: var(--fontfamily-banner);
+      color: var(--color-negro);
+      font-size: 25px;
+      font-weight: 600;
+  }
+  .title .line {
+      width: 10%;
+      height: 2px;
+      background-color: var(--color-oro);
+      margin-top: 3px;
+  }
+  
+  
+  
+  
+  /*================ Servicios ===========================*/
+  
+  .servicios {
+      width: 90%;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding-top: 50px;
+  }
+  .servicios .img {
+      width: 70%;
+  }
+  .servicios .img img {
+      max-width: 100%;
+      height: 280px;
+      margin: auto;
+      object-fit: cover;
+  }
+  .servicios .textos_servicios {
+      width: 90%;
+      margin-top: 50px;
+  }
+  .servicios .textos_servicios .descripcion:nth-child(1) {
+    padding-bottom: 30px;
+  }
+  
+  .servicios .textos_servicios .descripcion:nth-child(2) {
+      margin-top: 20px;
+  }
+  
+  .servicios .textos_servicios .descripcion .title_desc {
+      display: flex;
+      align-items: center;
+  }
+  .servicios .textos_servicios .descripcion .title_desc img {
+      width: 25px;
+      height: 25px;
+      object-fit: cover;
+  }
+  .servicios .textos_servicios .descripcion .title_desc h2 {
+      font-family: var(--fontfamily-titles);
+      color: var(--color-negro);
+      font-weight: 600;
+      font-size: 25px;
+      margin-left: 10px;
+  }
+  .servicios .textos_servicios .descripcion p {
+      font-family: var(--fontfamily-texto);
+      font-size: 16px;
+      color: var(--color-negro);
+      font-weight: 400;
+      margin-top: 15px;
+  } 
+  
+  
+  
+  
+  /*=======================  paginas =======================*/
+  
+  
+  .wrapper{
+      width: 100%;
+      margin-top: 70px;
+    }
+    .carousel{
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 30px;
+    }
+    .carousel .card{
+      margin: 30px 0px;
+      border: 1px solid rgba(46, 44, 44, 0.116);
+      border-radius: 10px;
+      box-shadow: 0px 4px 13px rgba(0, 0, 0, 0.287);
+      width: 100%;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    .carousel .card .contenedor_card {
+      width: 90%;
+      height: 80%;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      flex-direction: column;
+    }
+    .carousel .card .contenedor_card img {
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+    }
+  
+    .carousel .card .contenedor_card h3 {
+      font-family: var(--fontfamily-titles);
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--color-negro);
+  }
+  .carousel .card .contenedor_card p {
+      font-family: var(--fontfamily-texto);
+      font-size: 16px;
+      font-weight: 400;
+      width: 90%;
+      margin: auto;
+      text-align: center;
+  }
+  
+   /* .carousel .card-1{
+        background-color: brown;
+    }
+    .carousel .card-2{
+      background: #0072bc;
+    }
+    .carousel .card-3{
+      background: #39b54a;
+    }
+    .carousel .card-4{
+      background: #f26522;
+    }
+    .carousel .card-5{
+      background: #630460;
+    }*/
+    .owl-dots{
+      text-align: center;
+      margin-top: 40px;
+    }
+    .owl-dot{
+      height: 15px;
+      width: 45px;
+      margin: 0 5px;
+      outline: none;
+      border-radius: 14px;
+      border: 2px solid #0072bc!important;
+      box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
+    }
+    .owl-dot.active,
+    .owl-dot:hover{
+      background: #0072bc!important;
+    }
+   
+  
+    /* ===================  About =================*/
+  
+  
+    .about {
+        width: 100%;
+        background-color: var(--color-negro);
+        margin-top: 100px;
+      }
+    .textos_about {
+        width: 90%;
+        padding: 50px 0;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .about img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 10px;
+    }
+    .about h3 {
+        font-family: var(--fontfamily-titles);
+        font-weight: 600;
+        color: var(--color-oro);
+        margin-top: 3px;
+    }
+    .about .ab {
+      font-weight: 400;
+      color: var(--color-blanco);
+      font-size: 25px;
+      margin-top: 5px;
+  }
+  .about .desc {
+      font-family: var(--fontfamily-texto);
+      color: var(--color-blanco);
+      font-size: 16px;
+      margin-top: 10px;
+      text-align: center;
+      letter-spacing: 1px;
+  }
+  .textos_about em {
+      font-size: 20px;
+      color: var(--color-oro);
+  }
+  
+  
+  
+  
+  /*================ Portafolio ========================*/
+  
+  .portafolio {
+      width: 90%;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding-top: 50px;
+  }
+  .portafolio a {
+      width: 70%;
+      border: 1px solid black;
+      border-radius: 3px;
+      padding: 45px 0;
+      border: 1px solid rgba(46, 44, 44, 0.116);
+      box-shadow: 0px 4px 13px rgba(0, 0, 0, 0.287);
+      background-image: url(../imagenes/port1.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      object-fit: cover;
+      margin-top: 30px; 
+  }
+  
+  .portafolio a h4 {
+      font-family: var(--fontfamily-titles);
+      font-size: 20px;
+      color: var(--color-negro);
+      font-weight: 700;
+      width: 70%;
+      margin: auto;
+  }
+  .portafolio a p {
+      font-family: var(--fontfamily-texto);
+      font-size: 16px;
+      color: var(--color-negro);
+      font-weight: 500;
+      width: 70%;
+      margin: auto;
+      padding-top: 10px;
+  }
+  
+  
+  
+  
+  /*============= Footer ====================*/
+  
+  .footer {
+      width: 100%;
+      background-color: var(--color-gris);
+      margin-top: 140px;
+  }
+  .foo_desc {
+      width: 80%;
+      margin: auto;
+      text-align: center;
+      padding-top: 35px;
+      font-family: var(--fontfamily-titles);
+      color: var(--color-negro);
+      font-weight: 500;
+      font-size: 18px;
+  }
+  .agrado {
+      width: 80%;
+      margin: auto;
+      text-align: center;
+      padding-top: 35px;
+      font-family: var(--fontfamily-titles);
+      color: var(--color-negro);
+      font-weight: 500;
+      font-size: 18px;
+  }
+  .textos_foo {
+      width: 80%;
+      margin: auto;
+      padding-top: 35px;
+  }
+  .textos_foo .uno {
+      display: flex;
+      align-items: center;
+  }
+  .textos_foo .uno:nth-child(2) {
+      margin-top: 25px;
+  }
+  .textos_foo .uno:nth-child(3) {
+      margin-top: 25px;
+  }
+  .textos_foo .uno img {
+      width: 30px;
+      height: 30px;
+      object-fit: cover;
+  }
+  .textos_foo .uno p {
+      font-family: var(--fontfamily-texto);
+      color: var(--color-negro);
+      font-size: 16px;
+      margin-left: 18px;
+      font-weight: 500;
+  }
+  
+  .copy {
+      padding: 50px;
+      width: 90%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  .copy p {
+      font-family: var(--fontfamily-texto);
+      color: var(--color-negro);
+      font-size: 16px;
+      margin-left: 18px;
+      font-weight: 500;
+  }
+  
+}
+
+
+
+
+
+
+
+
+
+/*============================================  Responsive =======================================*/
+/*============================================  Responsive =======================================*/
+/*============================================  Responsive =======================================*/
+
+
+
+@media (max-width: 600px) {
+  /*====================== Banner =======================================*/
+
+  .banner {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+}
+.banner video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    z-index: -1;
+}
+.banner .textos_banner {
+    width: 95%;
+    height: 90%;
+    margin: auto auto;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.banner .textos_banner h1 {
+    font-size: 26px;
+    color: var(--color-obscuro);
+    font-family: var(--fontfamily-banner);
+    z-index: 1;
+    padding: 8px 15px;
+    background-color: hsla(54, 88%, 55%, 0.281);
+    border-radius: 5px;
+}
+.banner .textos_banner h2 {
+    font-size: 20px;
+    color: var(--color-obscuro);
+    font-family: var(--fontfamily-banner);
+    font-weight: 600;
+    z-index: 1;
+    margin-top: 10px;
+}
+.banner .textos_banner a {
+    font-size: 18px;
+    color: var(--color-obscuro);
+    font-family: var(--fontfamily-banner);
+    font-weight: 600;
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 3px 4px;
+    z-index: 1;
+    margin-top: 12px;
+}
+
+
+
+
+/*================ Title ===========================*/
+
+.title {
+    width: 90%;
+    margin: auto;
+    padding-top: 70px;
+}
+.title h2 {
+    font-family: var(--fontfamily-banner);
+    color: var(--color-negro);
+    font-size: 23px;
+    font-weight: 600;
+}
+.title .line {
+    width: 10%;
+    height: 2px;
+    background-color: var(--color-oro);
+    margin-top: 3px;
+}
+
+
+
+
+/*================ Servicios ===========================*/
+
+.servicios {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 35px;
+}
+.servicios .img {
+    width: 90%;
+}
+.servicios .img img {
+    max-width: 100%;
+    height: 220px;
+    margin: auto;
+    object-fit: cover;
+}
+.servicios .textos_servicios {
+    width: 90%;
+    margin-top: 50px;
+}
+.servicios .textos_servicios .descripcion:nth-child(1) {
+  padding-bottom: 20px;
+}
+
+.servicios .textos_servicios .descripcion:nth-child(2) {
+    margin-top: 15px;
+}
+
+.servicios .textos_servicios .descripcion .title_desc {
+    display: flex;
+    align-items: center;
+}
+.servicios .textos_servicios .descripcion .title_desc img {
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+}
+.servicios .textos_servicios .descripcion .title_desc h2 {
+    font-family: var(--fontfamily-titles);
+    color: var(--color-negro);
+    font-weight: 600;
+    font-size: 22px;
+    margin-left: 10px;
+}
+.servicios .textos_servicios .descripcion p {
+    font-family: var(--fontfamily-texto);
+    font-size: 16px;
+    color: var(--color-negro);
+    font-weight: 400;
+    margin-top: 12px;
+} 
+
+
+
+
+/*=======================  paginas =======================*/
+
+
+.wrapper{
+    width: 100%;
+    margin-top: 40px;
+  }
+  .carousel{
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 30px;
+  }
+  .carousel .card{
+    margin: 30px 0px;
+    border: 1px solid rgba(46, 44, 44, 0.116);
+    border-radius: 10px;
+    box-shadow: 0px 4px 13px rgba(0, 0, 0, 0.287);
+    width: 100%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .carousel .card .contenedor_card {
+    width: 90%;
+    height: 70%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+  }
+  .carousel .card .contenedor_card img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+
+  .carousel .card .contenedor_card h3 {
+    font-family: var(--fontfamily-titles);
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--color-negro);
+}
+.carousel .card .contenedor_card p {
+    font-family: var(--fontfamily-texto);
+    font-size: 16px;
+    font-weight: 400;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+ /* .carousel .card-1{
+      background-color: brown;
+  }
+  .carousel .card-2{
+    background: #0072bc;
+  }
+  .carousel .card-3{
+    background: #39b54a;
+  }
+  .carousel .card-4{
+    background: #f26522;
+  }
+  .carousel .card-5{
+    background: #630460;
+  }*/
+  .owl-dots{
+    text-align: center;
+    margin-top: 40px;
+  }
+  .owl-dot{
+    height: 15px;
+    width: 45px;
+    margin: 0 5px;
+    outline: none;
+    border-radius: 14px;
+    border: 2px solid #0072bc!important;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+  }
+  .owl-dot.active,
+  .owl-dot:hover{
+    background: #0072bc!important;
+  }
+ 
+
+  /* ===================  About =================*/
+
+
+  .about {
+      width: 100%;
+      background-color: var(--color-negro);
+      margin-top: 90px;
+    }
+  .textos_about {
+      width: 90%;
+      padding: 40px 0;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+  }
+  .about img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 10px;
+  }
+  .about h3 {
+      font-family: var(--fontfamily-titles);
+      font-weight: 600;
+      color: var(--color-oro);
+      margin-top: 3px;
+  }
+  .about .ab {
+    font-weight: 400;
+    color: var(--color-blanco);
+    font-size: 25px;
+    margin-top: 5px;
+}
+.about .desc {
+    font-family: var(--fontfamily-texto);
+    color: var(--color-blanco);
+    font-size: 16px;
+    margin-top: 10px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+.textos_about em {
+    font-size: 22px;
+    color: var(--color-oro);
+}
+
+
+
+
+/*================ Portafolio ========================*/
+
+.portafolio {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 35px;
+}
+.portafolio a {
+    width: 90%;
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 45px 0;
+    border: 1px solid rgba(46, 44, 44, 0.116);
+    box-shadow: 0px 4px 13px rgba(0, 0, 0, 0.287);
+    background-image: url(../imagenes/port1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    margin-top: 30px; 
+}
+
+.portafolio a h4 {
+    font-family: var(--fontfamily-titles);
+    font-size: 20px;
+    color: var(--color-negro);
+    font-weight: 700;
+    width: 70%;
+    margin: auto;
+}
+.portafolio a p {
+    font-family: var(--fontfamily-texto);
+    font-size: 16px;
+    color: var(--color-negro);
+    font-weight: 500;
+    width: 70%;
+    margin: auto;
+    padding-top: 10px;
+}
+
+
+
+
+/*============= Footer ====================*/
+
+.footer {
+    width: 100%;
+    background-color: var(--color-gris);
+    margin-top: 100px;
+}
+.foo_desc {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 25px;
+    font-family: var(--fontfamily-titles);
+    color: var(--color-negro);
+    font-weight: 500;
+    font-size: 18px;
+}
+.agrado {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 25px;
+    font-family: var(--fontfamily-titles);
+    color: var(--color-negro);
+    font-weight: 500;
+    font-size: 18px;
+}
+.textos_foo {
+    width: 80%;
+    margin: auto;
+    padding-top: 25px;
+}
+.textos_foo .uno {
+    display: flex;
+    align-items: center;
+}
+.textos_foo .uno:nth-child(2) {
+    margin-top: 20px;
+}
+.textos_foo .uno:nth-child(3) {
+    margin-top: 20px;
+}
+.textos_foo .uno img {
+    width: 25px;
+    height: 25px;
+    object-fit: cover;
+}
+.textos_foo .uno p {
+    font-family: var(--fontfamily-texto);
+    color: var(--color-negro);
+    font-size: 16px;
+    margin-left: 18px;
+    font-weight: 500;
+}
+
+.copy {
+    padding: 40px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+.copy p {
+    font-family: var(--fontfamily-texto);
+    color: var(--color-negro);
+    font-size: 16px;
+    margin-left: 18px;
+    font-weight: 500;
+}
+
+}
+
+
+
+
+
+
+
+
+
+/*============================================  Responsive =======================================*/
+/*============================================  Responsive =======================================*/
+/*============================================  Responsive =======================================*/
+
+
+
+@media (max-width: 450px) {
+  /*====================== Banner =======================================*/
+
+  .banner {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+}
+.banner video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    z-index: -1;
+}
+.banner .textos_banner {
+    width: 95%;
+    height: 90%;
+    margin: auto auto;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.banner .textos_banner h1 {
+    font-size: 22px;
+    color: var(--color-obscuro);
+    font-family: var(--fontfamily-banner);
+    z-index: 1;
+    padding: 8px 15px;
+    background-color: hsla(54, 88%, 55%, 0.281);
+    border-radius: 5px;
+    font-weight: 700;
+}
+.banner .textos_banner h2 {
+    font-size: 18px;
+    color: var(--color-obscuro);
+    font-family: var(--fontfamily-banner);
+    font-weight: 600;
+    z-index: 1;
+    margin-top: 10px;
+}
+.banner .textos_banner a {
+    font-size: 16px;
+    color: var(--color-obscuro);
+    font-family: var(--fontfamily-banner);
+    font-weight: 600;
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 3px 4px;
+    z-index: 1;
+    margin-top: 12px;
+}
+
+
+
+
+/*================ Title ===========================*/
+
+.title {
+    width: 90%;
+    margin: auto;
+    padding-top: 60px;
+}
+.title h2 {
+    font-family: var(--fontfamily-banner);
+    color: var(--color-negro);
+    font-size: 22px;
+    font-weight: 600;
+}
+.title .line {
+    width: 15%;
+    height: 1px;
+    background-color: var(--color-oro);
+    margin-top: 3px;
+}
+
+
+
+
+/*================ Servicios ===========================*/
+
+.servicios {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 35px;
+}
+.servicios .img {
+    width: 90%;
+}
+.servicios .img img {
+    max-width: 100%;
+    height: 180px;
+    margin: auto;
+    object-fit: cover;
+}
+.servicios .textos_servicios {
+    width: 100%;
+    margin-top: 30px;
+}
+.servicios .textos_servicios .descripcion:nth-child(1) {
+  padding-bottom: 15px;
+}
+
+.servicios .textos_servicios .descripcion:nth-child(2) {
+    margin-top: 15px;
+}
+
+.servicios .textos_servicios .descripcion .title_desc {
+    display: flex;
+    align-items: center;
+}
+.servicios .textos_servicios .descripcion .title_desc img {
+    width: 18px;
+    height: 18px;
+    object-fit: cover;
+}
+.servicios .textos_servicios .descripcion .title_desc h2 {
+    font-family: var(--fontfamily-titles);
+    color: var(--color-negro);
+    font-weight: 600;
+    font-size: 20px;
+    margin-left: 10px;
+}
+.servicios .textos_servicios .descripcion p {
+    font-family: var(--fontfamily-texto);
+    font-size: 16px;
+    color: var(--color-negro);
+    font-weight: 400;
+    margin-top: 12px;
+} 
+
+
+
+
+/*=======================  paginas =======================*/
+
+
+.wrapper{
+    width: 100%;
+    margin-top: 30px;
+  }
+  .carousel{
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 30px;
+  }
+  .carousel .card{
+    margin: 20px 0px;
+    border: 1px solid rgba(46, 44, 44, 0.116);
+    border-radius: 10px;
+    box-shadow: 0px 4px 13px rgba(0, 0, 0, 0.287);
+    width: 100%;
+    height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .carousel .card .contenedor_card {
+    width: 90%;
+    height: 90%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+  }
+  .carousel .card .contenedor_card img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+
+  .carousel .card .contenedor_card h3 {
+    font-family: var(--fontfamily-titles);
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--color-negro);
+}
+.carousel .card .contenedor_card p {
+    font-family: var(--fontfamily-texto);
+    font-size: 16px;
+    font-weight: 400;
+    width: 90%;
+    margin: auto;
+    text-align: center;
+}
+
+ /* .carousel .card-1{
+      background-color: brown;
+  }
+  .carousel .card-2{
+    background: #0072bc;
+  }
+  .carousel .card-3{
+    background: #39b54a;
+  }
+  .carousel .card-4{
+    background: #f26522;
+  }
+  .carousel .card-5{
+    background: #630460;
+  }*/
+  .owl-dots{
+    text-align: center;
+    margin-top: 40px;
+  }
+  .owl-dot{
+    height: 15px;
+    width: 35px;
+    margin: 0 5px;
+    outline: none;
+    border-radius: 14px;
+    border: 2px solid #0072bc!important;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+    transition: all 0.4s ease;
+  }
+  .owl-dot.active,
+  .owl-dot:hover{
+    background: #0072bc!important;
+  }
+ 
+
+  /* ===================  About =================*/
+
+
+  .about {
+      width: 100%;
+      background-color: var(--color-negro);
+      margin-top: 90px;
+    }
+  .textos_about {
+      width: 90%;
+      padding: 40px 0;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+  }
+  .about img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 10px;
+  }
+  .about h3 {
+      font-family: var(--fontfamily-titles);
+      font-weight: 600;
+      color: var(--color-oro);
+      margin-top: 3px;
+  }
+  .about .ab {
+    font-weight: 300;
+    color: var(--color-blanco);
+    font-size: 22px;
+    margin-top: 5px;
+}
+.about .desc {
+    font-family: var(--fontfamily-texto);
+    color: var(--color-blanco);
+    font-size: 16px;
+    margin-top: 10px;
+    text-align: center;
+}
+.textos_about em {
+    font-size: 22px;
+    color: var(--color-oro);
+}
+
+
+
+
+/*================ Portafolio ========================*/
+
+.portafolio {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 30px;
+}
+.portafolio a {
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 45px 0;
+    border: 1px solid rgba(46, 44, 44, 0.116);
+    box-shadow: 0px 4px 13px rgba(0, 0, 0, 0.287);
+    background-image: url(../imagenes/port1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    margin-top: 30px; 
+}
+
+.portafolio a h4 {
+    font-family: var(--fontfamily-titles);
+    font-size: 20px;
+    color: var(--color-negro);
+    font-weight: 700;
+    width: 85%;
+    margin: auto;
+}
+.portafolio a p {
+    font-family: var(--fontfamily-texto);
+    font-size: 16px;
+    color: var(--color-negro);
+    font-weight: 500;
+    width: 85%;
+    margin: auto;
+    padding-top: 10px;
+}
+
+
+
+
+/*============= Footer ====================*/
+
+.footer {
+    width: 100%;
+    background-color: var(--color-gris);
+    margin-top: 100px;
+}
+.foo_desc {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    padding-top: 25px;
+    font-family: var(--fontfamily-titles);
+    color: var(--color-negro);
+    font-weight: 500;
+    font-size: 16px;
+}
+.agrado {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    padding-top: 25px;
+    font-family: var(--fontfamily-titles);
+    color: var(--color-negro);
+    font-weight: 500;
+    font-size: 16px;
+}
+.textos_foo {
+    width: 80%;
+    margin: auto;
+    padding-top: 25px;
+}
+.textos_foo .uno {
+    display: flex;
+    align-items: center;
+}
+.textos_foo .uno:nth-child(2) {
+    margin-top: 20px;
+}
+.textos_foo .uno:nth-child(3) {
+    margin-top: 20px;
+}
+.textos_foo .uno img {
+    width: 25px;
+    height: 25px;
+    object-fit: cover;
+}
+.textos_foo .uno p {
+    font-family: var(--fontfamily-texto);
+    color: var(--color-negro);
+    font-size: 16px;
+    margin-left: 18px;
+    font-weight: 500;
+}
+
+.copy {
+    padding: 40px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.copy p {
+    font-family: var(--fontfamily-texto);
+    color: var(--color-negro);
+    font-size: 16px;
+    margin-left: 18px;
+    font-weight: 500;
+}
+
+}

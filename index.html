@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseño Web Moderno</title>
+    <link rel="shortcut icon" href="./recursos/imagenes/logo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="./recursos/css/estilos.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+</head>
+<body>
+
+
+
+    <!---------------------- LOADER -------------------------------------------->
+
+    <div class="container_loader" id="container_loader">
+        <div class="preloader">
+            <img src="./recursos/imagenes/loading.svg" alt="">
+            <p>loading ...</p>
+        </div>
+    </div>
+
+<!-------------------------------- BARRA DE NAVEGACION ----------------------------->
+<header class="header" id="header">
+    <nav class="nav container">
+        <a href="#" class="nav__logo">
+            <img src="./recursos/imagenes/logo.svg" alt="">
+        </a>
+
+        <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a href="#servicios" class="nav__link">Servicios</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#paginas" class="nav__link">Paginas Web</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#about" class="nav__link">Conoceme</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#portafolio" class="nav__link">Portafolio</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#contacto" class="nav__link">Contacto</a>
+                </li>
+            </ul>
+
+            <div class="nav__close" id="nav-close">
+                <img src="./recursos/imagenes/close.png" alt="">
+            </div>
+        </div>
+
+        <div class="nav__toggle" id="nav-toggle">
+            <img src="./recursos/imagenes/menu.png" alt="">
+        </div>
+    </nav>
+</header>
+
+
+
+<!-------------------------------- banner ----------------------------->
+
+<div class="banner">
+    <video src="./recursos/imagenes/video.mp4" autoplay muted loop></video>
+    <div class="textos_banner">
+         <h1>Incrementa tus Ventas o Servicios un 200%</h1>
+         <h2>Con una pagina web moderna</h2>
+         <a href="#contacto">Contacto</a>
+    </div>
+ </div>
+
+
+
+
+<div id="servicios"></div>
+ <!-------------------------------- Title ----------------------------->
+
+ <div class="title">
+     <h2>Servicios</h2>
+     <div class="line"></div>
+ </div>
+
+
+
+
+ <!-------------------------------- Servicios ----------------------------->
+
+
+ <section class="servicios">
+     <div class="img">
+        <img src="./recursos/imagenes/about1.jpg" alt="">
+     </div>
+
+     <div class="textos_servicios">
+
+         <div class="descripcion">
+             <div class="title_desc">
+                 <img src="./recursos/imagenes/chek.png" alt="">
+                 <h2>Paginas Web Modernas</h2>
+             </div>
+             <p>La tecnologia avanza cada dia mas, es por eso que las redes sociales y medios de comunicacion 
+                 son herramientas que puedes utilizar efectivamente para lograr que mas personas conozcan tus productos o servicios,
+                 y de esta manera logres que el numero de clientes crezca y tus ventas incrementen consederablemente
+             </p>
+         </div>
+
+          <div class="descripcion">
+             <div class="title_desc">
+                 <img src="./recursos/imagenes/chek.png" alt="">
+                 <h2>Prestigio y Ventas</h2>
+             </div>
+             <p>Una pagina web moderna es una herramienta actual de marketing que le agrega plus y prestigio
+                  a tus productos y servicios que ofreces, utilizala para llegar a mas personas, y que tus 
+                  ventas aumenten 
+             </p>
+         </div>
+
+     </div>
+ </section>
+
+
+
+ <div id="paginas"></div>
+
+<!-------------------------------- Title ----------------------------->
+
+<div class="title">
+    <h2>5 caracteristicas de tu Pagina Web</h2>
+    <div class="line"></div>
+</div>
+
+
+
+<!-------------------------------- 5 pack ----------------------------->
+
+<div class="wrapper">
+    <div class="carousel owl-carousel">
+        
+        <!--card 1-->
+       <div class="card card-1">
+           <div class="contenedor_card">
+                <img src="./recursos/imagenes/diseño.png" alt="">
+                <h3>Diseños Modernos</h3>
+                <p>Lo mas actual de html y css para diseñar <strong>paginas web modernas y atractivas</strong>
+                    que muestren la calidad de informacion, productos o servicios que ofreces
+                </p>
+            </div>
+        </div>
+
+        <!--card 2-->
+       <div class="card card-2">
+            <div class="contenedor_card">
+                <img src="./recursos/imagenes/responsive1.png" alt="">
+                <h3>Responsive</h3>
+                <p>Todos podran ver tu pagina web, ya que estan diseñadas para que se 
+                    adapten a cualquier dispositivo de escritorio, lap top o moviles, sin que 
+                    pierdan su calidad
+                </p>
+            </div>        
+       </div>
+
+       <!--card 3-->
+       <div class="card card-3">
+            <div class="contenedor_card">
+                <img src="./recursos/imagenes/seguridad.png" alt="">
+                <h3>Seguridad</h3>
+                <p><strong>Sistema de seguridad de cifrado</strong>, esto te brinda confiabilidad de datos, para que tus clientes
+                     visiten con seguridad tu pagina web</p>
+            </div>
+       </div>
+
+       <!--card 4-->
+       <div class="card card-4">
+            <div class="contenedor_card">
+                <img src="./recursos/imagenes/hosting.png" alt="">
+                <h3>Hosting</h3>
+                <p>Las paginas web estan desarrolladas por codigo, por lo que
+                    tienen un lugar donde se alojan ( hosting ) en un equipo local
+                </p>
+            </div>
+       </div>
+
+       <!--card 5-->
+       <div class="card card-5">
+            <div class="contenedor_card">
+                <img src="./recursos/imagenes/dominio.png" alt="">
+                <h3>Dominio</h3>
+                <p>El dominio es el nombre publico de tu pagina web,
+                    el servicio que ofrezco cuanta con un dominio con extencion <strong>.ml, .tk</strong> o 
+                    <strong>.cf</strong>
+                    por un periodo de 12 meses
+                </p>
+            </div>
+       </div>
+
+    </div>
+ </div>
+       
+
+
+
+ <div id="about"></div>
+
+<!-------------------------------- About ----------------------------->
+
+<div class="about">
+    <div class="textos_about">
+        <img src="./recursos/imagenes/foto.jpg" alt="">
+        <h3>Fredy Junco</h3>
+        <p class="ab">- <em class="ab">Diseñador Web</em> -</p>
+        <p class="desc"><em>"</em>hola, soy fredy, autodidacta y emprendedor al igual que tu, 
+            si es de tu agrado te ofrezco el servicio de diseñar y desarrollarte tu pagina web, contactame,
+             te garantizo costos realmente economicos !<em>"</em></p>
+    </div>
+</div>
+
+
+
+
+<!-------------------------------- Title ----------------------------->
+
+<div class="title">
+    <h2>Herramientas Utilizadas</h2>
+    <div class="line"></div>
+</div>
+
+
+
+
+<div class="wrapper">
+    <div class="carousel owl-carousel">
+        
+        <!--card 1-->
+       <div class="card card-1">
+           <div class="contenedor_card">
+                <img src="./recursos/imagenes/html.png" alt="">
+                <h3>html5</h3>
+                <p>lenguaje utilizado para la estructura basica de una pagina web, actualizacion
+                    hasta el año 2021
+                </p>
+            </div>
+        </div>
+
+        <!--card 2-->
+       <div class="card card-2">
+            <div class="contenedor_card">
+                <img src="./recursos/imagenes/css.png" alt="">
+                <h3>Css3</h3>
+                <p>Lenguaje de estilos, se utiliza para diseñar una pagina web,
+                    por la cual se le añaden estilos y efectos visuales que permite una buena
+                    experiencia de usuario
+                </p>
+            </div>        
+       </div>
+
+       <!--card 3-->
+       <div class="card card-3">
+            <div class="contenedor_card">
+                <img src="./recursos/imagenes/js.png" alt="">
+                <h3>JavaScript</h3>
+                <p>Lenguaje de programacion que lo utilizo 
+                    para crear animaciones, transiciones y efectos de interfaz
+                </p>
+            </div>
+       </div>
+
+    </div>
+ </div>
+
+
+
+
+
+ <div id="portafolio"></div>
+
+ <!-------------------------------- Title ----------------------------->
+
+<div class="title">
+    <h2>Portafolio</h2>
+    <div class="line"></div>
+</div>
+
+<section class="portafolio">
+    <a href="#">
+        <h4>Diseño 1</h4>
+        <p>( Boutique )</p>
+    </a>
+
+    <a href="#">
+        <h4>Diseño 2</h4>
+        <p>( Pasteleria )</p>
+    </a>
+
+    <a href="#">
+        <h4>Diseño 3</h4>
+        <p>( Cafeteria )</p>
+</section>
+
+
+
+
+
+
+    <!-------------------------------- Footer ----------------------------->
+
+    <div id="contacto"></div>
+
+
+<footer class="footer">
+
+    <!-------------------------------- Title ----------------------------->
+
+<div class="title">
+    <h2>Contacto</h2>
+    <div class="line"></div>
+</div>
+
+
+
+
+<p class="foo_desc">
+    - Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae nihil animi officia officiis architecto. Consectetur delectus similique totam cum, accusamus cupiditate, explicabo distinctio facilis, veniam asperiores deserunt? Sunt id nam deserunt. Dolores assumenda eligend -
+</p>
+
+<p class="agrado">
+    Contactame por el medio de tu agrado y en breve me comunico con tigo !
+</p>
+
+<div class="textos_foo">
+    <div class="uno">
+        <img class="icono" src="./recursos/imagenes/location.png" alt="">
+        <p>Edo. de Mexico</p>
+    </div>
+
+    <div class="uno">
+        <img class="icono" src="./recursos/imagenes/whatsapp.png" alt="">
+        <p>55- 8246 7023</p>
+    </div>
+
+    <div class="uno">
+        <img class="icono" src="./recursos/imagenes/email.png" alt="">
+        <p>fredyjunco7@gmail.com</p>
+    </div>
+</div>
+
+   <div class="copy">
+       <p>Diseño Web Moderno 2020 - 2021</p>
+       <p>&copy; todos los derechos reservados.</p>    
+   </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <script>
+    $(".carousel").owlCarousel({
+      margin: 20,
+      loop: true,
+      autoplay: true,
+      autoplayTimeout: 3000,
+      autoplayHoverPause: true,
+      responsive: {
+        0:{
+          items:1,
+          nav: false
+        },
+        600:{
+          items:2,
+          nav: false
+        },
+        1000:{
+          items:3,
+          nav: false
+        }
+      }
+    });
+ </script>
+
+
+
+
+    <!-------------------------------- Scroll Reveal ----------------------------->
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-------------------------------- Swiper Js ----------------------------->
+
+    <script src="./recursos/js/swiper-bundle.min.js"></script>
+
+    <!-------------------------------- JavaScritp ----------------------------->
+
+    <script src="./recursos/js/main.js"></script>
+    
+</body>
+</html>
